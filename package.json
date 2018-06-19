@@ -9,7 +9,9 @@
     "build": "gulp build",
     "deploy": "gulp deploy",
     "start": "npm run contributors && gulp",
-    "test": "npm run jsonvalidate && gulp build"
+    "test": "npm run jsonvalidate && gulp build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -41,7 +43,8 @@
     "gulp-pug-lint": "^0.1.6",
     "gulp-sass": "^3.1.0",
     "pdfkit": "^0.8.0",
-    "request": "^2.79.0"
+    "request": "^2.79.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -49,5 +52,6 @@
     "browser-sync": "^2.18.13",
     "gulp-gh-pages": "^0.5.4",
     "jsonlint": "^1.6.2"
-  }
+  },
+  "snyk": true
 }
